@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 1525px;
+  min-width: 200px;
+}
+  
+/*header*/
+
+  header{
+    display: flex;
+    padding-top: 30px;
+    padding-left: 5px;
+    width: 1525px;
+    height: 40px;
+    margin: 0;
+    font-weight: 500;
+    background: #FFFFFF;
+    align-items: center; 
+    cursor: pointer;  
+    box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.05);
+  }
+
+  header h1 img{
+    height: 20px;
+    width: auto; 
+    margin: 5px 10px 25px 30px;
+  }
+
+  header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 20px 60px 10px 500px;
+    justify-content: space-between;
+  }
+
+  header nav ul li a {
+    color: #000000;
+    font-size: 11px;
+    font-family: "Lato, sans-serif";
+    text-decoration: none;
+    line-height: 14.4px;
+    display: block;
+    font-weight: 500;
+    text-size-adjust: 100%;
+    width: 110px;
+    text-align: center;
+    word-break: break-all;
+  }
+
+  header nav ul li a:hover{
+    opacity: 0.7;
+  }
+
+  span{
+  display: block;
+  }
+
+  header nav ul li a button{
+    transition: opacity 0.2s;
+    align-items: center;
+    background-color: #F79214;
+    border: none;
+    border-radius: 38px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    font-weight: 700px;
+    height: 40px;
+    width: 150px;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 35px;
+    margin-left: 20px;
+    padding: 20px;
+}
+
+/*main visual*/
+
+.img1 {
+  position: absolute;
+  margin: -70px 500px 500px -10px;
+  z-index: -1;
+}
+
+.img2{
+  position: absolute;
+  margin: 84px 80px 200px -70px;
+}
+
+.img3{
+  position: absolute;
+  margin: -70px 0px 100px 755px;
+  width: 775px;
+  position: absolute;
+  z-index: -1;
+}
+
+.img4{
+  position: absolute;
+  margin: 330px 0px 70px 1180px;
+  z-index: -1;
+}
+
+.img5{
+  position: absolute;
+  margin: -240px 50px 0px -35px;
+  width: 43%;
+}
+
+h2{
+  position: absolute;
+  color: #333;
+  font-family: "Lato", sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 63px;
+  margin: 230px 0px 0px 230px;
+  padding: 0;
+}
+
+  .button2{
+    position: absolute;
+    transition: opacity 0.2s;
+    align-items: center;
+    background-color: #F79214;
+    border: none;
+    border-radius: 38px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: 700;
+    height: 64px;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    width: 32%;
+    margin: 430px 0px 0px 230px;
+    padding: 0;
+}
+  
+.caption{
+  position: absolute;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 520px 0px 0px 230px;
+  padding: 0;
+}
+
+@media screen and (max-width: 1080px) {
+  .Header--common {
+      position: fixed !important;
+  }
+}
