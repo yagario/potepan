@@ -31,7 +31,7 @@ body {
   header nav ul {
     list-style: none;
     display: flex;
-    margin: 20px 60px 10px 500px;
+    margin: 20px 60px 20px 500px;
     justify-content: space-between;
   }
 
@@ -153,8 +153,185 @@ h2{
   padding: 0;
 }
 
-@media screen and (max-width: 1080px) {
-  .Header--common {
-      position: fixed !important;
+@media screen and (max-width: 414px) {
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 414px;
+    min-width: 100px;
+  }
+  
+  header{
+    padding-top: 30px;
+    padding-left: 5px;
+    width: 414px;
+    height: 40px;
+    margin: 0;
+    font-weight: 500;
+    background: #FFFFFF;
+    align-items: center; 
+    cursor: pointer;  
+    box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.05);
+  }
+    
+  /*header*/
+/* ハンバーガーメニュー */
+  
+/* チェックボックスを非表示にする */
+.drawer_hidden {
+  display: none;
+}
+
+/* ハンバーガーアイコン設置スペース */
+.drawer_open {
+  display: flex;
+  height: 5px;
+  width: 5px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100;/* 重なり順を一番上にする */
+  cursor: pointer;
+  margin: 0px 0px 35px 100px;
+}
+
+/* ハンバーガーメニューアイコン */
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 20px;
+  border-radius: 3px;
+  background: #a9a9a9;
+  transition: 0.5s;
+  position: absolute;
+}
+
+/* 三本線の一番上の棒の位置調整 */
+.drawer_open span:before {
+  bottom: 8px;
+}
+
+/* 三本線の一番下の棒の位置調整 */
+.drawer_open span:after {
+  top: 8px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer_input:checked ~ .drawer_open span {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer_input:checked ~ .drawer_open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#drawer_input:checked ~ .drawer_open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+  
+/* メニューのデザイン*/
+.humMenu {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 90%;
+  max-width: 330px;/*最大幅（お好みで調整を）*/
+  height: 100%;
+  background: #fff;
+  transition: .3s ease-in-out;
+  -webkit-transform: translateX(-105%);
+  transform: translateX(-105%);
+}
+
+.nav_list {
+  list-style: none;
+}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer_input:checked ~ .humMenu {
+  left: 0;/* メニューを画面に入れる */
+}
+  
+  /*main visual*/
+  
+  .img1 {
+    position: absolute;
+    margin: -200px 500px 500px -10px;
+    z-index: -1;
+  }
+  
+  .img2{
+    position: absolute;
+    margin: 10px 0px 110px 50px;
+    width: 60%;
+    z-index: -1;
+  }
+  
+  .img3{
+    position: absolute;
+    margin: 0px 0px 100px 120px;
+    width: 80%;
+    position: absolute;
+    z-index: -1;
+  }
+  
+  .img4{
+    width: 0%
+  }
+  
+  .img5{
+    position: absolute;
+    margin: -75px 100px 320px -10px;
+    width: 40%;
+  }
+  
+  h2{
+    position: absolute;
+    color: #333;
+    font-family: "Lato", sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 38px;
+    margin: 250px 0px 0px 20px;
+    padding: 0;
+  }
+  
+    .button2{
+      position: absolute;
+      transition: opacity 0.2s;
+      align-items: center;
+      background-color: #F79214;
+      border: none;
+      border-radius: 38px;
+      color: #fff;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      font-size: 16px;
+      font-weight: 1000;
+      height: 64px;
+      justify-content: center;
+      text-decoration: none;
+      text-align: center;
+      width: 90%;
+      margin: 380px 0px 0px 20px;
+      padding: 0;
+  }
+    
+  .caption{
+    position: absolute;
+    font-size: 11px;
+    line-height: 16px;
+    margin: 460px 20px 0px 20px;
+    padding: 0;
   }
 }
