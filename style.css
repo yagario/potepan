@@ -2,17 +2,17 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  max-width: 1525px;
-  min-width: 200px;
+  min-width: 414px;
 }
   
 /*header*/
 
   header{
     display: flex;
-    padding-top: 30px;
+    padding-top: 38px;
     padding-left: 5px;
-    width: 1525px;
+    width: 100%;
+    min-width: 414px;
     height: 40px;
     margin: 0;
     font-weight: 500;
@@ -25,26 +25,26 @@ body {
   header h1 img{
     height: 20px;
     width: auto; 
-    margin: 5px 10px 25px 30px;
+    margin: 5px 10px 25px 40px;
   }
 
   header nav ul {
     list-style: none;
     display: flex;
-    margin: 20px 60px 20px 500px;
+    margin: 20px 60px 40px 580px;
     justify-content: space-between;
   }
 
   header nav ul li a {
     color: #000000;
-    font-size: 11px;
+    font-size: 12px;
     font-family: "Lato, sans-serif";
     text-decoration: none;
     line-height: 14.4px;
     display: block;
-    font-weight: 500;
+    font-weight: 600;
     text-size-adjust: 100%;
-    width: 110px;
+    width: 120px;
     text-align: center;
     word-break: break-all;
   }
@@ -69,57 +69,58 @@ body {
     flex-direction: column;
     font-size: 12px;
     font-weight: 700px;
-    height: 40px;
-    width: 150px;
+    height: 45px;
+    width: 170px;
     justify-content: center;
     text-decoration: none;
     text-align: center;
-    margin-bottom: 35px;
     margin-left: 20px;
-    padding: 20px;
 }
 
 /*main visual*/
 
 .img1 {
   position: absolute;
-  margin: -70px 500px 500px -10px;
+  margin: -30px 500px 500px -10px;
   z-index: -1;
 }
 
 .img2{
   position: absolute;
-  margin: 84px 80px 200px -70px;
+  margin: 100px 70px 100px -70px;
+  width: 35%;
 }
 
 .img3{
   position: absolute;
-  margin: -70px 0px 100px 755px;
+  margin: -70px 0px 0px 850px;
   width: 775px;
   position: absolute;
   z-index: -1;
+  width: 50%;
 }
 
 .img4{
   position: absolute;
-  margin: 330px 0px 70px 1180px;
+  margin: 350px 0px 0px 1325px;
   z-index: -1;
+  width: 22%;
 }
 
 .img5{
   position: absolute;
-  margin: -240px 50px 0px -35px;
-  width: 43%;
+  margin: -230px 0px 0px 50px;
+  width: 48%;
 }
 
 h2{
   position: absolute;
   color: #333;
   font-family: "Lato", sans-serif;
-  font-size: 42px;
+  font-size: 46px;
   font-weight: 800;
   line-height: 63px;
-  margin: 230px 0px 0px 230px;
+  margin: 250px 0px 0px 230px;
   padding: 0;
 }
 
@@ -141,7 +142,7 @@ h2{
     text-decoration: none;
     text-align: center;
     width: 32%;
-    margin: 430px 0px 0px 230px;
+    margin: 450px 0px 0px 230px;
     padding: 0;
 }
   
@@ -149,117 +150,144 @@ h2{
   position: absolute;
   font-size: 12px;
   line-height: 16px;
-  margin: 520px 0px 0px 230px;
+  margin: 540px 0px 0px 230px;
   padding: 0;
 }
 
-@media screen and (max-width: 414px) {
-  body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    max-width: 414px;
-    min-width: 100px;
-  }
-  
-  header{
-    padding-top: 30px;
-    padding-left: 5px;
-    width: 414px;
-    height: 40px;
-    margin: 0;
-    font-weight: 500;
-    background: #FFFFFF;
-    align-items: center; 
-    cursor: pointer;  
-    box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.05);
-  }
-    
-  /*header*/
-/* ハンバーガーメニュー */
-  
-/* チェックボックスを非表示にする */
-.drawer_hidden {
+
+
+.c-hamburger-menu {
+  position: relative;
+}
+
+div.humMenu {
   display: none;
 }
 
-/* ハンバーガーアイコン設置スペース */
-.drawer_open {
-  display: flex;
-  height: 5px;
-  width: 5px;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 100;/* 重なり順を一番上にする */
+
+@media screen and (max-width: 414px) {
+  .c-hamburger-menu__list {
+    background-color: #FFFFFF;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    padding: 2rem; 
+    position: absolute;
+    transform: translateX(-100%);
+    transition: 0.3s;
+    width: 100%;
+    top: 100%
+  }
+
+  div.humMenu {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  #hamburger:checked ~ .c-hamburger-menu__list {
+    transform: translateX(0%);
+    transition: 0.3s;
+  }
+
+  .c-header__list c-hamburger-menu__list {
+    /* 通常時は非表示 */
+    display: none;
+    background-color: rgba(0, 0, 0, .05);
+  }
+
+  header{
+    display: flex;
+    width: 100%;
+    height: 18px;
+    margin: 0;
+    background: #FFFFFF; 
+    cursor: pointer;  
+    box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.05);
+  }
+
+  header h1 img{
+    height: 18px;
+    width: auto; 
+    margin: 0px 0px 20px 20px;
+  }
+}
+
+.c-hamburger-menu__input {
+  display: none;
+}
+
+.c-hamburger-menu__bg {
+  background-color: #000; 
   cursor: pointer;
-  margin: 0px 0px 35px 100px;
-}
-
-/* ハンバーガーメニューアイコン */
-.drawer_open span,
-.drawer_open span:before,
-.drawer_open span:after {
-  content: '';
-  display: block;
-  height: 3px;
-  width: 20px;
-  border-radius: 3px;
-  background: #a9a9a9;
-  transition: 0.5s;
-  position: absolute;
-}
-
-/* 三本線の一番上の棒の位置調整 */
-.drawer_open span:before {
-  bottom: 8px;
-}
-
-/* 三本線の一番下の棒の位置調整 */
-.drawer_open span:after {
-  top: 8px;
-}
-
-/* アイコンがクリックされたら真ん中の線を透明にする */
-#drawer_input:checked ~ .drawer_open span {
-  background: rgba(255, 255, 255, 0);
-}
-
-/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
-#drawer_input:checked ~ .drawer_open span::before {
-  bottom: 0;
-  transform: rotate(45deg);
-}
-
-#drawer_input:checked ~ .drawer_open span::after {
-  top: 0;
-  transform: rotate(-45deg);
-}
-  
-/* メニューのデザイン*/
-.humMenu {
-  overflow: auto;
-  position: fixed;
-  top: 0;
+  display: none;
+  height: 100vh;
   left: 0;
-  z-index: 9999;
-  width: 90%;
-  max-width: 330px;/*最大幅（お好みで調整を）*/
-  height: 100%;
-  background: #fff;
-  transition: .3s ease-in-out;
-  -webkit-transform: translateX(-105%);
-  transform: translateX(-105%);
+  opacity: 0.4; 
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
 }
 
-.nav_list {
-  list-style: none;
+#hamburger:checked ~ .c-hamburger-menu__bg {
+  display: block;
 }
 
-/* アイコンがクリックされたらメニューを表示 */
-#drawer_input:checked ~ .humMenu {
-  left: 0;/* メニューを画面に入れる */
+.c-hamburger-menu__button {
+  display: none;
 }
+
+@media screen and (max-width: 414px) {
+  .c-hamburger-menu__button {
+    align-items: center;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px; 
+    height: 32px;
+    justify-content: center;
+    width: 32px; 
+    margin: 0px 0px 35px 110px;
+  }
+}
+
+.c-hamburger-menu__button-mark {
+  background-color: #000; 
+  display: block;
+  height: 1px; 
+  transition: 0.3s; 
+  width: 20px; 
+}
+
+@media screen and (max-width: 414px) {
+  #hamburger:checked
+    ~ .c-hamburger-menu__button
+    .c-hamburger-menu__button-mark:nth-of-type(1) {
+    transform: translate(2px, 1px) rotate(45deg); 
+    transform-origin: 0%; 
+  }
+  #hamburger:checked
+    ~ .c-hamburger-menu__button
+    .c-hamburger-menu__button-mark:nth-of-type(2) {
+    opacity: 0;
+  }
+  #hamburger:checked
+    ~ .c-hamburger-menu__button
+    .c-hamburger-menu__button-mark:nth-of-type(3) {
+    transform: translate(2px, 3px) rotate(-45deg); 
+    transform-origin: 0%;  
+  }
   
   /*main visual*/
   
