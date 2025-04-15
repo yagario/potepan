@@ -197,8 +197,9 @@ label{
     height: 32px;
     justify-content: center;
     width: 32px; 
-    margin: 0px 0px 35px 130px;
+    margin: 0px 0px 35px 110px;
   }
+}
 
 .c-hamburger-menu__button-mark {
   background-color: #000; 
@@ -207,10 +208,27 @@ label{
   transition: 0.3s; 
   width: 20px; 
 }
-}
- 
-/*main visual*/
+
 @media screen and (max-width: 414px) {
+  #hamburger:checked
+    ~ .c-hamburger-menu__button
+    .c-hamburger-menu__button-mark:nth-of-type(1) {
+    transform: translate(2px, 1px) rotate(45deg); 
+    transform-origin: 0%; 
+  }
+  #hamburger:checked
+    ~ .c-hamburger-menu__button
+    .c-hamburger-menu__button-mark:nth-of-type(2) {
+    opacity: 0;
+  }
+  #hamburger:checked
+    ~ .c-hamburger-menu__button
+    .c-hamburger-menu__button-mark:nth-of-type(3) {
+    transform: translate(2px, 3px) rotate(-45deg); 
+    transform-origin: 0%;  
+  }
+  
+  /*main visual*/
   
   .img1 {
     position: absolute;
