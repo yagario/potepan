@@ -2,7 +2,6 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  min-width: 414px;
 }
   
 /*header*/
@@ -12,7 +11,6 @@ body {
     padding-top: 38px;
     padding-left: 5px;
     width: 100%;
-    min-width: 414px;
     height: 40px;
     margin: 0;
     font-weight: 500;
@@ -31,7 +29,7 @@ body {
   header nav ul {
     list-style: none;
     display: flex;
-    margin: 20px 60px 40px 580px;
+    margin: 20px 0px 40px 400px;
     justify-content: space-between;
   }
 
@@ -93,7 +91,7 @@ body {
 
 .img3{
   position: absolute;
-  margin: -70px 0px 0px 850px;
+  margin: -70px 0px 0px 760px;
   width: 775px;
   position: absolute;
   z-index: -1;
@@ -102,7 +100,7 @@ body {
 
 .img4{
   position: absolute;
-  margin: 350px 0px 0px 1325px;
+  margin: 350px 0px 0px 1180px;
   z-index: -1;
   width: 22%;
 }
@@ -136,7 +134,7 @@ h2{
     display: flex;
     flex-direction: column;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 500;
     height: 64px;
     justify-content: center;
     text-decoration: none;
@@ -199,7 +197,7 @@ label{
     height: 32px;
     justify-content: center;
     width: 32px; 
-    margin: 0px 0px 35px 150px;
+    margin: 0px 0px 35px 130px;
   }
 
 .c-hamburger-menu__button-mark {
@@ -210,8 +208,9 @@ label{
   width: 20px; 
 }
 }
-  
-  /*main visual*/
+ 
+/*main visual*/
+@media screen and (max-width: 414px) {
   
   .img1 {
     position: absolute;
