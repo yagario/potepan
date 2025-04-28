@@ -26,7 +26,7 @@ function start(){
 function stop(){
     clearInterval(timer);
 
-    holdTime = (Date.now() - startTime)/1000;
+    holdTime += (Date.now() - startTime);
 
     startButton.disabled = false;
     stopButton.disabled = true;
@@ -38,7 +38,7 @@ function reset(){
 
     elapsedTime = 0;
     holdTime = 0;
-    showTime.textContent = "0:0:0:0";
+    showTime.textContent = "00:00:00:00";
 
     startButton.disabled = false;
     stopButton.disabled = true;
