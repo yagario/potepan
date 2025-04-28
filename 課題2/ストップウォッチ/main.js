@@ -3,9 +3,9 @@ let stopButton;
 let resetButton;    
 let showTime;       
 
-let timer;              // setinterval, clearTimeoutで使用
-let startTime;          // 開始時間
-let elapsedTime = 0;    // 経過時間
+let timer;              
+let startTime;          
+let elapsedTime = 0;    
 let holdTime = 0;       
 
 window.onload = function () {
