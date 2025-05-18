@@ -1,0 +1,33 @@
+  .dentaku{
+    max-width: 500px;
+    margin: 20px;
+  }
+
+  input{
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    text-align: right;
+    width: 400px;
+    color: #ffffff;
+    background-color: #000000;
+  }
+
+  button{
+    font-size: 18px;
+    width: 96px;
+    height: 35px;
+    border-radius: 5px;
+    color: #000000;
+  }
+
+  .gedan{
+    font-size: 18px;
+    width: 196px;
+    height: 35px;
+    border-radius: 5px;
+    color: #000000;
+  }
+
+  button:hover{
+    border-color: #5900ff;
+  }
